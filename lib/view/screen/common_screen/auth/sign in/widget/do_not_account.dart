@@ -34,21 +34,21 @@ class DoNotHaveAccount extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: AppString.signUp,
+                  text: " ",
                   style: GoogleFonts.plusJakartaSans(
-                    color: AppColors.primaryColor,
+                    color: AppColors.p1,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 TextSpan(
-                  text: "".tr,
+                  text: AppString.signUp,
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
                       Get.toNamed(AppRoutes.signUp);
                     },
                   style: GoogleFonts.plusJakartaSans(
-                    color: AppColors.secondary,
+                    color: AppColors.p1,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:vapeless/utils/app_colors.dart';
 import '../../../../../controllers/common_controller/auth/forget_password_controller.dart';
 import '../../../../../helpers/my_extension.dart';
 import '../../../../../helpers/app_routes.dart';
@@ -21,8 +22,8 @@ class CreatePassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  const CommonText(
-          text: AppRoutes.createPassword,
+        title: const CommonText(
+          text: AppString.resetPassword,
           fontWeight: FontWeight.w700,
           fontSize: 24,
         ),
@@ -37,48 +38,49 @@ class CreatePassword extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   64.height,
-                  Center(
-                    child: CommonImage(
-                      imageSrc: AppImages.noImage,
-                      imageType: ImageType.png,
-                      height: 297,
-                      width: 297,
-                    ),
-                  ),
                   const CommonText(
-                    text: AppString.createYourNewPassword,
-                    fontSize: 18,
-                    textAlign: TextAlign.start,
-                    top: 64,
-                    bottom: 24,
-                  ),
+                    text: AppString.nowResetYour,
+                    fontSize: 24,
+                  ).center,
+                  const CommonText(
+                    text: AppString.password,
+                    fontSize: 24,
+                    color: AppColors.p1,
+                    bottom: 70,
+                  ).center,
                   const CommonText(
                     text: AppString.password,
                     bottom: 8,
                   ),
                   CommonTextField(
                     controller: controller.passwordController,
-                    prefixIcon: const Icon(Icons.lock),
+                    prefixIcon: const Icon(
+                      Icons.lock,
+                      color: AppColors.t4,
+                    ),
                     hintText: AppString.password,
                     isPassword: true,
                     validator: OtherHelper.passwordValidator,
                   ),
                   const CommonText(
-                    text: AppString.password,
+                    text: AppString.confirmPassword,
                     bottom: 8,
-                    top: 12,
+                    top: 20,
                   ),
                   CommonTextField(
                     controller: controller.confirmPasswordController,
-                    prefixIcon: const Icon(Icons.lock),
+                    prefixIcon: const Icon(
+                      Icons.lock,
+                      color: AppColors.t4,
+                    ),
                     hintText: AppString.confirmPassword,
                     validator: (value) => OtherHelper.confirmPasswordValidator(
                         value, controller.passwordController),
                     isPassword: true,
                   ),
-                  64.height,
+                  150.height,
                   CommonButton(
-                    titleText: AppString.continues,
+                    titleText: AppString.resetPassword,
                     isLoading: controller.isLoadingReset,
                     onTap: () {
                       if (formKey.currentState!.validate()) {

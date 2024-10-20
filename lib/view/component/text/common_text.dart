@@ -16,11 +16,10 @@ class CommonText extends StatelessWidget {
       this.bottom = 0,
       this.fontSize = 14,
       this.fontWeight = FontWeight.w500,
-      this.color = AppColors.black,
+      this.color = AppColors.t3,
       required this.text,
       this.style = false,
-      this.overflow = TextOverflow.ellipsis
-      });
+      this.overflow = TextOverflow.ellipsis});
 
   final double left;
   final double right;
@@ -38,20 +37,20 @@ class CommonText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          EdgeInsets.only(left: left.w, right: right.w, top: top.h, bottom: bottom.h),
+      padding: EdgeInsets.only(
+          left: left.w, right: right.w, top: top.h, bottom: bottom.h),
       child: Text(
         textAlign: textAlign,
         text,
         maxLines: maxLines,
         overflow: overflow,
         style: style == true
-            ? GoogleFonts.plusJakartaSans(
+            ? GoogleFonts.poppins(
                 fontSize: fontSize.sp,
                 fontWeight: fontWeight,
                 color: color,
               )
-            : GoogleFonts.roboto(
+            : GoogleFonts.poppins(
                 fontSize: fontSize.sp,
                 fontWeight: fontWeight,
                 color: color,

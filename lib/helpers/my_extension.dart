@@ -18,6 +18,11 @@ extension View2 on Widget {
         alignment: Alignment.centerRight,
         child: this,
       );
+
+  Widget get center => Align(
+        alignment: Alignment.center,
+        child: this,
+      );
 }
 
 extension View3 on DateTime {

@@ -32,18 +32,26 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const CommonText(
-                      text: AppString.logIntoYourAccount,
+                      text: AppString.continueYourJourney,
                       fontSize: 32,
-                      bottom: 20,
                       top: 36,
-                    ),
+                    ).center,
+                    const CommonText(
+                      text: AppString.letSignIn,
+                      bottom: 24,
+                      fontSize: 32,
+                      color: AppColors.p1,
+                    ).center,
                     const CommonText(
                       text: AppString.email,
                       bottom: 8,
                     ),
                     CommonTextField(
                       controller: controller.emailController,
-                      prefixIcon: const Icon(Icons.mail),
+                      prefixIcon: const Icon(
+                        Icons.mail,
+                        color: AppColors.t4,
+                      ),
                       hintText: AppString.email,
                       validator: OtherHelper.emailValidator,
                     ),
@@ -54,7 +62,10 @@ class SignInScreen extends StatelessWidget {
                     ),
                     CommonTextField(
                       controller: controller.passwordController,
-                      prefixIcon: const Icon(Icons.lock),
+                      prefixIcon: const Icon(
+                        Icons.lock,
+                        color: AppColors.t4,
+                      ),
                       isPassword: true,
                       hintText: AppString.password,
                       validator: OtherHelper.passwordValidator,
@@ -66,8 +77,8 @@ class SignInScreen extends StatelessWidget {
                         child: const CommonText(
                           text: AppString.forgotThePassword,
                           top: 10,
-                          bottom: 30,
-                          color: AppColors.primaryColor,
+                          bottom: 100,
+                          color: AppColors.t2,
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                         ),
@@ -82,8 +93,8 @@ class SignInScreen extends StatelessWidget {
                         }
                       },
                     ),
-                    30.height,
-                    const DoNotHaveAccount()
+                    50.height,
+                    const DoNotHaveAccount().center
                   ],
                 ),
               ),

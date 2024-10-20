@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vapeless/utils/app_colors.dart';
 import '../../../../../helpers/my_extension.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -32,14 +33,17 @@ class ForgotPasswordScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CommonText(
+                const CommonText(
                   text: AppString.email,
                   bottom: 8,
                   top: 80,
                 ),
                 CommonTextField(
                   controller: controller.emailController,
-                  prefixIcon: const Icon(Icons.mail),
+                  prefixIcon: const Icon(
+                    Icons.mail,
+                    color: AppColors.t4,
+                  ),
                   hintText: AppString.email,
                   validator: OtherHelper.emailValidator,
                 ),
@@ -51,7 +55,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
           child: CommonButton(
-            titleText: AppString.continues,
+            titleText: AppString.getOTP,
             isLoading: controller.isLoadingEmail,
             onTap: () {
               if (formKey.currentState!.validate()) {

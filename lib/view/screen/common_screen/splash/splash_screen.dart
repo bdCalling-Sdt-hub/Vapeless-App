@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vapeless/utils/app_colors.dart';
+import 'package:vapeless/utils/app_string.dart';
+import 'package:vapeless/view/component/text/common_text.dart';
 import '../../../../helpers/my_extension.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -28,8 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
         //     Get.offAllNamed(AppRoutes.patientsHome);
         //   }
         // } else {
-          Get.offAllNamed(AppRoutes.onboarding);
-
+        Get.offAllNamed(AppRoutes.onboarding);
       },
     );
     super.initState();
@@ -45,15 +47,20 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            Center(
-                child: CommonImage(
-              imageSrc: AppImages.noImage,
-              height: 70,
-              imageType: ImageType.png,
+            const Center(
+                child: CommonText(
+              text: AppString.vapeLess,
+              fontSize: 56,
+              color: AppColors.primaryColor,
+              fontWeight: FontWeight.bold,
+            )),
+            const Center(
+                child: CommonText(
+              text: AppString.yourJourneyFreedoom,
             )),
             const Spacer(),
             const CommonLoader(),
-           20.height,
+            100.height,
           ],
         ),
       ),

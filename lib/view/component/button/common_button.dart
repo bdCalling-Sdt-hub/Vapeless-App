@@ -62,7 +62,7 @@ class CommonButton extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.roboto(
+                style: GoogleFonts.poppins(
                     color: titleColor,
                     fontSize: titleSize.sp,
                     fontWeight: titleWeight),

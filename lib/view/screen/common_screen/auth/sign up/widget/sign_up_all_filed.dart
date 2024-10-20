@@ -31,7 +31,8 @@ class _SignUpAllFieldState extends State<SignUpAllField> {
             ),
             CommonTextField(
               prefixIcon: const Icon(
-                Icons.group,
+                Icons.person,
+                color: AppColors.t4,
               ),
               hintText: AppString.fullName,
               controller: controller.nameController,
@@ -44,7 +45,7 @@ class _SignUpAllFieldState extends State<SignUpAllField> {
             ),
             CommonTextField(
               controller: controller.emailController,
-              prefixIcon: const Icon(Icons.mail, color: AppColors.black),
+              prefixIcon: const Icon(Icons.mail, color: AppColors.t4),
               hintText: AppString.email,
               validator: OtherHelper.emailValidator,
             ),
@@ -55,7 +56,7 @@ class _SignUpAllFieldState extends State<SignUpAllField> {
             ),
             CommonTextField(
               controller: controller.passwordController,
-              prefixIcon: const Icon(Icons.lock, color: AppColors.black),
+              prefixIcon: const Icon(Icons.lock, color: AppColors.t4),
               isPassword: true,
               hintText: AppString.password,
               validator: OtherHelper.passwordValidator,
@@ -67,20 +68,11 @@ class _SignUpAllFieldState extends State<SignUpAllField> {
             ),
             CommonTextField(
               controller: controller.confirmPasswordController,
-              prefixIcon: const Icon(Icons.lock, color: AppColors.black),
+              prefixIcon: const Icon(Icons.lock, color: AppColors.t4),
               isPassword: true,
               hintText: AppString.confirmPassword,
               validator: (value) => OtherHelper.confirmPasswordValidator(
                   value, controller.passwordController),
-            ),
-            const CommonText(
-              text: AppString.phoneNumber,
-              bottom: 8,
-              top: 12,
-            ),
-            CommonPhoneNumberTextFiled(
-              controller: controller.numberController,
-              countryChange: controller.onCountryChange,
             ),
           ],
         );

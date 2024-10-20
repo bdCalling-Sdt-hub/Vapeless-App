@@ -28,51 +28,28 @@ class SignUpScreen extends StatelessWidget {
                 key: formKey,
                 child: Column(children: [
                   const CommonText(
-                    text: AppString.createYourAccount,
+                    text: AppString.welcome,
                     fontSize: 32,
-                    bottom: 20,
                   ),
-                  const SignUpAllField(),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Row(
-                        children: [
-                          Radio(
-                              value: controller.selectedOption[0],
-                              groupValue: controller.selectRole,
-                              activeColor: AppColors.primaryColor,
-                              onChanged: controller.setSelectedRole),
-                          CommonText(
-                            text: controller.selectedOption[0],
-                            fontSize: 18,
-                            color: controller.selectRole ==
-                                    controller.selectedOption[0]
-                                ? AppColors.primaryColor
-                                : AppColors.black,
-                          )
-                        ],
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const CommonText(
+                        text: AppString.signUp,
+                        fontSize: 32,
+                        bottom: 20,
+                        color: AppColors.p1,
                       ),
-                      Row(
-                        children: [
-                          Radio(
-                              value: controller.selectedOption[1],
-                              groupValue: controller.selectRole,
-                              activeColor: AppColors.primaryColor,
-                              onChanged: controller.setSelectedRole),
-                          CommonText(
-                            text: controller.selectedOption[1],
-                            fontSize: 18,
-                            color: controller.selectRole ==
-                                    controller.selectedOption[1]
-                                ? AppColors.primaryColor
-                                : AppColors.black,
-                          )
-                        ],
+                      6.width,
+                      const CommonText(
+                        text: AppString.toQuit,
+                        fontSize: 32,
+                        bottom: 20,
                       ),
                     ],
                   ),
-                  16.height,
+                  const SignUpAllField(),
+                  80.height,
                   CommonButton(
                     titleText: AppString.signUp,
                     isLoading: controller.isLoading,

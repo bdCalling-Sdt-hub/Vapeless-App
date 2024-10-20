@@ -26,29 +26,34 @@ class AppString {
   static const String createNewPassword = "Create New Password";
   static const String createYourNewPassword = "Create Your New Password";
   static const String password = "Password";
+  static const String nowResetYour = "Now Reset Your";
   static const String continues = "Continue";
+  static const String resetPassword = "Reset Password";
+  static const String getOTP = "Get OTP";
   static const String email = "Email";
+  static const String letSignIn = "Let’s Sign In";
   static const String codeHasBeenSendTo = "Code has been send to";
   static const String otpIsInValid = "Otp is inValid";
   static const String resendCode = "Resend Code";
   static const String resendCodeIn = "Resend code in";
   static const String minute = "minute";
   static const String verify = "Verify";
-  static const String logIntoYourAccount = "Login to Your Account";
+  static const String continueYourJourney = "Continue Your Journey";
   static const String forgotThePassword = "Forgot the password";
   static const String signIn = "Sign in";
   static const String doNotHaveAccount = "Don’t have an account";
   static const String signUp = "Sign up";
   static const String alreadyHaveAccount = "Already have an account";
   static const String fullName = "Full Name";
-  static const String createYourAccount = "Create Your Account";
+  static const String welcome = "Welcome!";
+  static const String toQuit = "to Quit!";
   static const String otpVerify = "OTP Verify";
   static const String inbox = "Inbox";
   static const String searchDoctor = "search a doctor";
   static const String activeNow = "Active Now";
   static const String messageHere = "message here";
   static const String notifications = "Notifications";
-  static const String signInWithPassword = "Sign in with password";
+  static const String signInWithPassword = "Sign in";
   static const String contact = "Contact";
   static const String dateOfBirth = "Date of birth";
   static const String age = "Age";
@@ -62,6 +67,8 @@ class AppString {
   static const String privacyPolicy = "Privacy Policy";
   static const String deleteAccount = "Delete account";
   static const String termsOfServices = "Terms of Services";
+  static const String vapeLess = "VapeLess";
+  static const String yourJourneyFreedoom = "Your journey to freedoom";
 
 
 }

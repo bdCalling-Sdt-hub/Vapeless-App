@@ -49,6 +49,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     prefixIcon: Icon(
                       Icons.lock,
                       size: 20.sp,
+                      color: AppColors.t4,
                     ),
                   ),
                   const CommonText(
@@ -64,6 +65,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     prefixIcon: Icon(
                       Icons.lock,
                       size: 20.sp,
+                      color: AppColors.t4,
                     ),
                   ),
                   const CommonText(
@@ -80,6 +82,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     prefixIcon: Icon(
                       Icons.lock,
                       size: 20.sp,
+                      color: AppColors.t4,
                     ),
                   ),
                   Align(
