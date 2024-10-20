@@ -4,12 +4,9 @@ import 'package:get/get.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import '../../../../../controllers/common_controller/auth/forget_password_controller.dart';
 import '../../../../../helpers/my_extension.dart';
-import '../../../../../helpers/app_routes.dart';
 import '../../../../../helpers/other_helper.dart';
-import '../../../../../utils/app_images.dart';
 import '../../../../../utils/app_string.dart';
 import '../../../../component/button/common_button.dart';
-import '../../../../component/image/common_image.dart';
 import '../../../../component/text/common_text.dart';
 import '../../../../component/text_field/common_text_field.dart';
 

@@ -6,7 +6,6 @@ import '../../../../../../helpers/other_helper.dart';
 import '../../../../../../utils/app_colors.dart';
 import '../../../../../../utils/app_string.dart';
 import '../../../../../component/text/common_text.dart';
-import '../../../../../component/text_field/common_phone_number_text_filed.dart';
 import '../../../../../component/text_field/common_text_field.dart';
 
 class SignUpAllField extends StatefulWidget {

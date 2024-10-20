@@ -7,8 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../helpers/app_routes.dart';
-import '../../../../utils/app_images.dart';
-import '../../../component/image/common_image.dart';
 import '../../../component/other_widgets/common_loader.dart';
 
 class SplashScreen extends StatefulWidget {
