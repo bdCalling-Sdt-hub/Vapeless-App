@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:vapeless/view/screen/question/first_question_screen.dart';
 
 import '../view/screen/common_screen/auth/change_password/change_password_screen.dart';
 import '../view/screen/common_screen/auth/forgot password/create_password.dart';
@@ -19,7 +20,6 @@ import '../view/screen/common_screen/setting/terms_of_services_screen.dart';
 import '../view/screen/common_screen/splash/splash_screen.dart';
 import '../view/screen/test_screen.dart';
 
-
 class AppRoutes {
   static const String test = "/test_screen.dart";
   static const String splash = "/splash_screen.dart";
@@ -39,6 +39,7 @@ class AppRoutes {
   static const String privacyPolicy = "/privacy_policy_screen.dart";
   static const String termsOfServices = "/terms_of_services_screen.dart";
   static const String setting = "/setting_screen.dart";
+  static const String firstQuestion = "/first_question_screen.dart";
 
   static List<GetPage> routes = [
     GetPage(
@@ -112,6 +113,10 @@ class AppRoutes {
     GetPage(
         name: setting,
         page: () => SettingScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: firstQuestion,
+        page: () => FirstQuestionScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

@@ -23,6 +23,7 @@ class AppString {
   static const String confirmPassword = "Confirm Password";
   static const String forgotPassword = "Forgot Password";
   static const String confirm = "Confirm";
+  static const String next = "NEXT";
   static const String createNewPassword = "Create New Password";
   static const String createYourNewPassword = "Create Your New Password";
   static const String password = "Password";
@@ -69,6 +70,7 @@ class AppString {
   static const String termsOfServices = "Terms of Services";
   static const String vapeLess = "VapeLess";
   static const String yourJourneyFreedoom = "Your journey to freedoom";
+  static const String breakFreeToday = "Break Free Today";
 
 
 }

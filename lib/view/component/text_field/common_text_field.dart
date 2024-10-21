@@ -28,6 +28,7 @@ class CommonTextField extends StatelessWidget {
       this.labelTextColor = AppColors.t4,
       this.textColor = AppColors.t4,
       this.borderColor = AppColors.transparent,
+      this.textAlign = TextAlign.start,
       this.onSubmitted,
       this.onTap,
       this.suffixIcon});
@@ -44,6 +45,7 @@ class CommonTextField extends StatelessWidget {
   final Color? hintTextColor;
   final Color? textColor;
   final Color borderColor;
+  final TextAlign textAlign;
 
   final double paddingHorizontal;
   final double paddingVertical;
@@ -69,6 +71,7 @@ class CommonTextField extends StatelessWidget {
         autovalidateMode: AutovalidateMode.onUserInteraction,
         keyboardType: keyboardType,
         validator: validator,
+        textAlign: textAlign,
         controller: controller,
         obscureText: obscureText.value,
         textInputAction: textInputAction,

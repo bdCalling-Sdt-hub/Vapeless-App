@@ -13,6 +13,9 @@ class AppColors {
   static const blueLight = Color(0xffe8e8f5);
   static const t3 = Color(0xffEBECF0);
   static const t4 = Color(0xffEBECF0);
+  static const t7 = Color(0xff0F384D);
   static const t2 = Color(0xff8A8E9E);
   static const p1 = Color(0xff1991A9);
+  static const nav = Color(0xff18BBFF);
+  static const inputBar = Color(0xff323A59);
 }
