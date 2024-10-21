@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:vapeless/helpers/app_routes.dart';
 
 class QuestionController extends GetxController {
   int index = 0;
@@ -16,6 +17,7 @@ class QuestionController extends GetxController {
       index++;
       update();
     } else {
+      Get.toNamed(AppRoutes.vapelessProfile);
       index = 0;
       update();
     }

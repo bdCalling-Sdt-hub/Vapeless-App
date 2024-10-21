@@ -24,6 +24,7 @@ class AppString {
   static const String forgotPassword = "Forgot Password";
   static const String confirm = "Confirm";
   static const String next = "NEXT";
+  static const String vapingDependencyLevel = "Vaping Dependency Level";
   static const String createNewPassword = "Create New Password";
   static const String createYourNewPassword = "Create Your New Password";
   static const String password = "Password";
@@ -71,6 +72,23 @@ class AppString {
   static const String vapeLess = "VapeLess";
   static const String yourJourneyFreedoom = "Your journey to freedoom";
   static const String breakFreeToday = "Break Free Today";
+  static const String yourVapingProfile = "Your Vaping  Profile";
+  static const String potentialYearlySaving = "Potential Yearly Saving";
+  static const String vapelessProfileDetails =
+      "Based on your habits,quitting vaping could significantly improve your health and finances. You’ve taken the first step towards a healthier lifestyle!";
+  static const String moderate = "Moderate";
+  static const String startMyQuittingJourney = "Start My Quitting Journey ";
+  static const String subscription = "Subscription";
+  static const String unlockYourVapeFreePotential =
+      "Unlock Your Vape-Free Potential";
+  static const String startYourJourneyToVapeFreeLifeToday =
+      "Start  Your journey to vape Free life today";
+  static const String reviewDetails =
+      "“VapeLess changed my life! I’m 3 months vape-free and feeling great!”";
+  static const String startYourFreeTrialNow = "Start Your Free Trial Now";
+  static const String trialDetails =
+      "After the trial,  VapeLess Premium is just \$5.99/week";
 
-
+  static const String vapLessPremiumIsJust =
+      "VapLess Premium is just";
 }

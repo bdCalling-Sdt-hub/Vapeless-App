@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:vapeless/controllers/question_controller.dart';
+import 'package:vapeless/controllers/subscription_controller.dart';
 
 import '../controllers/common_controller/auth/change_password_controller.dart';
 import '../controllers/common_controller/auth/forget_password_controller.dart';
@@ -28,5 +29,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => PrivacyPolicyController(), fenix: true);
     Get.lazyPut(() => TermsOfServicesController(), fenix: true);
     Get.lazyPut(() => QuestionController(), fenix: true);
+    Get.lazyPut(() => SubscriptionController(), fenix: true);
   }
 }
