@@ -86,7 +86,7 @@ class DashboardScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: DashboardItem(
-                      title: "Daily Avg",
+                      title: AppString.dailyAvg,
                       icon: CommonImage(
                         imageSrc: AppIcons.dailyAve,
                         height: 30,
@@ -97,7 +97,7 @@ class DashboardScreen extends StatelessWidget {
                 10.width,
                 Expanded(
                   child: DashboardItem(
-                      title: "Streak",
+                      title: AppString.streak,
                       icon: CommonImage(
                         imageSrc: AppIcons.streak,
                         height: 30,
@@ -108,7 +108,7 @@ class DashboardScreen extends StatelessWidget {
                 10.width,
                 Expanded(
                   child: DashboardItem(
-                      title: "Gap",
+                      title: AppString.gap,
                       icon: CommonImage(
                         imageSrc: AppIcons.gap,
                         height: 30,

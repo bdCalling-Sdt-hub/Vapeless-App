@@ -105,4 +105,7 @@ class AppString {
   static const String dashboard = "Dashboard";
   static const String recovery = "Recovery";
   static const String breathing = "Breathing";
+  static const String dailyAvg = "Daily Avg";
+  static const String streak = "Streak";
+  static const String gap = "Gap";
 }
