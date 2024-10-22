@@ -124,7 +124,8 @@ class DashboardScreen extends StatelessWidget {
               child: PuffsResiue(),
             ),
             20.height,
-            const GoalsDashboard()
+            const GoalsDashboard(),
+            20.height,
           ],
         ),
       ),

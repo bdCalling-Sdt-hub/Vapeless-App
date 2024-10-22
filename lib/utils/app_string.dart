@@ -102,4 +102,7 @@ class AppString {
   static const String goalsDashboard = "Goals dashboard";
   static const String nicotineGoals = "Nicotine Goals";
   static const String dailyLimit = "Daily Limit:";
+  static const String dashboard = "Dashboard";
+  static const String recovery = "Recovery";
+  static const String breathing = "Breathing";
 }

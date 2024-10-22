@@ -2,9 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:vapeless/utils/app_icons.dart';
+import 'package:vapeless/utils/app_string.dart';
+import 'package:vapeless/view/component/image/common_image.dart';
+import 'package:vapeless/view/component/text/common_text.dart';
 import '../../../helpers/app_routes.dart';
 import '../../../utils/app_colors.dart';
-
 
 class CommonBottomNavBar extends StatefulWidget {
   final int currentIndex;
@@ -17,18 +20,19 @@ class CommonBottomNavBar extends StatefulWidget {
 
 class _CommonBottomNavBarState extends State<CommonBottomNavBar> {
   var bottomNavIndex = 0;
-  List<Widget> unselectedIcons = [
-    const Icon(Icons.settings_outlined, color: AppColors.black),
-    const Icon(Icons.notifications_outlined, color: AppColors.black),
-    const Icon(Icons.chat, color: AppColors.black),
-    const Icon(Icons.person_2_outlined, color: AppColors.black),
+
+  List icon = [
+    AppIcons.dashboard,
+    AppIcons.recovery,
+    AppIcons.breathing,
+    AppIcons.profile,
   ];
 
-  List<Widget> selectedIcons = [
-    const Icon(Icons.settings_outlined, color: AppColors.primaryColor),
-    const Icon(Icons.notifications, color: AppColors.primaryColor),
-    const Icon(Icons.chat, color: AppColors.primaryColor),
-    const Icon(Icons.person, color: AppColors.primaryColor),
+  List title = [
+    AppString.dashboard,
+    AppString.recovery,
+    AppString.breathing,
+    AppString.profile
   ];
 
   @override
@@ -46,22 +50,36 @@ class _CommonBottomNavBarState extends State<CommonBottomNavBar> {
         alignment: Alignment.center,
         padding: EdgeInsets.all(12.sp),
         decoration: BoxDecoration(
-            color: AppColors.blueLight,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.r),
-                topRight: Radius.circular(20.r))),
+          gradient: LinearGradient(
+            colors: [
+              const Color(0xff969696).withOpacity(0.6),
+              const Color(0xff393939).withOpacity(0.4),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(unselectedIcons.length, (index) {
+          children: List.generate(icon.length, (index) {
             return GestureDetector(
               onTap: () => onTap(index),
               child: Container(
                 margin: EdgeInsetsDirectional.all(12.sp),
                 child: Column(
                   children: [
-                    index == bottomNavIndex
-                        ? selectedIcons[index]
-                        : unselectedIcons[index],
+                    CommonImage(
+                      imageSrc: icon[index],
+                      imageColor: index == bottomNavIndex
+                          ? AppColors.nav
+                          : AppColors.white,
+                    ),
+                    CommonText(
+                      text: title[index],
+                      color: index == bottomNavIndex
+                          ? AppColors.nav
+                          : AppColors.white,
+                    )
                   ],
                 ),
               ),
@@ -78,7 +96,7 @@ class _CommonBottomNavBarState extends State<CommonBottomNavBar> {
     }
     if (index == 0) {
       if (!(widget.currentIndex == 0)) {
-        Get.toNamed(AppRoutes.setting);
+        Get.toNamed(AppRoutes.dashboard);
       }
     } else if (index == 1) {
       if (!(widget.currentIndex == 1)) {
