@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       ensureScreenSize: true,
       minTextAdapt: true,
       splitScreenMode: true,
-      designSize: const Size(428, 926),
+      designSize: const Size(393, 852),
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         navigatorKey: Get.key,

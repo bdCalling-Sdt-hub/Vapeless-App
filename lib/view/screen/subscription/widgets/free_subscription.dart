@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:get/get.dart';
+import 'package:vapeless/helpers/app_routes.dart';
 import 'package:vapeless/helpers/my_extension.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import 'package:vapeless/utils/app_string.dart';
@@ -87,7 +89,10 @@ class FreeSubscription extends StatelessWidget {
                 ],
               ),
             ),
-            const CommonButton(titleText: AppString.startYourFreeTrialNow),
+            CommonButton(
+              titleText: AppString.startYourFreeTrialNow,
+              onTap: () => Get.toNamed(AppRoutes.dashboard),
+            ),
             const CommonText(
               text: AppString.trialDetails,
               fontSize: 12,

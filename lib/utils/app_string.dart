@@ -90,9 +90,16 @@ class AppString {
   static const String trialDetails =
       "After the trial,  VapeLess Premium is just \$5.99/week";
 
-  static const String vapLessPremiumIsJust =
-      "VapLess Premium is just";
+  static const String vapLessPremiumIsJust = "VapLess Premium is just";
 
-  static const String selectPaymentMethod =
-      "Select payment method";
+  static const String selectPaymentMethod = "Select payment method";
+  static const String tapToCount = "Tap to Count";
+
+  static const String puffsToday = "PUFFS TODAY";
+  static const String puffResiue = "Puff’s Resiue";
+  static const String goalsPuffs = "Goals Puffs";
+  static const String yourPuffs = "Your Puffs";
+  static const String goalsDashboard = "Goals dashboard";
+  static const String nicotineGoals = "Nicotine Goals";
+  static const String dailyLimit = "Daily Limit:";
 }

@@ -55,6 +55,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   flutter_paypal_payment: ^1.0.6
   flutter_stripe: ^10.1.1
+  fl_chart: ^0.69.0
 
 
 dev_dependencies:

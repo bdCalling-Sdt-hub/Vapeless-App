@@ -13,6 +13,7 @@ import '../controllers/common_controller/profile/profile_controller.dart';
 import '../controllers/common_controller/setting/privacy_policy_controller.dart';
 import '../controllers/common_controller/setting/setting_controller.dart';
 import '../controllers/common_controller/setting/terms_of_services_controller.dart';
+import '../controllers/dashboard/dashboard_controller.dart';
 
 class DependencyInjection extends Bindings {
   @override
@@ -30,5 +31,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => TermsOfServicesController(), fenix: true);
     Get.lazyPut(() => QuestionController(), fenix: true);
     Get.lazyPut(() => SubscriptionController(), fenix: true);
+    Get.lazyPut(() => DashboardController(), fenix: true);
   }
 }
