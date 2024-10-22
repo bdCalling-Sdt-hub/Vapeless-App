@@ -53,6 +53,8 @@ dependencies:
   linear_progress_bar: ^1.1.2
   carousel_slider: ^5.0.0
   flutter_rating_bar: ^4.0.1
+  flutter_paypal_payment: ^1.0.6
+  flutter_stripe: ^10.1.1
 
 
 dev_dependencies:

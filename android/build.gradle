@@ -1,3 +1,21 @@
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                // Ensure the namespace is set, fallback to project group if not defined
+                if (!namespace) {
+                    namespace = project.group
+                }
+            }
+        }
+    }
+
+    // Set the build directory for each subproject relative to the root
+    rootProject.buildDir = "../build"
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+
 allprojects {
     repositories {
         google()
