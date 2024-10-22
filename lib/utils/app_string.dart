@@ -24,6 +24,7 @@ class AppString {
   static const String forgotPassword = "Forgot Password";
   static const String confirm = "Confirm";
   static const String next = "NEXT";
+  static const String payment = "Payment";
   static const String vapingDependencyLevel = "Vaping Dependency Level";
   static const String createNewPassword = "Create New Password";
   static const String createYourNewPassword = "Create Your New Password";
@@ -91,4 +92,7 @@ class AppString {
 
   static const String vapLessPremiumIsJust =
       "VapLess Premium is just";
+
+  static const String selectPaymentMethod =
+      "Select payment method";
 }

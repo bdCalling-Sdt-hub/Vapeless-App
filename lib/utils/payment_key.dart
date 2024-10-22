@@ -1,10 +1,10 @@
-class PaymentKey {
-  static const String publishableKey =
-      "pk_test_51P7cjfFYdd3YNv37nIg6ZHebtVgCX4hL4o98rkCDgT5Xc9n0SaiTsYMsN3fNLFBZzjzIldTVpGcKMGJAJYmPKsrr00uztWaY1E";
+const String clientId =
+    "AaCH5bLv0gDhHMrW3gbqchECbFFJjLnkhRmfeQlGuFdp441uPkiXEnuW5MS5QHndFS2JEMWhsogkcSRm";
+const String secretKey =
+    "EOu1iAOF9P0uDwkyKfWUfzUB4WjfUAi38GEi1U2QjdjP8MfQRNAZ5JoQGDwvDJunDxTFZPL15DVKpSxF";
 
-  static const String secretKey =
-      "sk_test_51P7cjfFYdd3YNv3705REeoKX21e0sHxOyfJWDFHHBMcgpB02geqFXzMUJ1qGLM01fekYDkDiJ6HmNlrkCatt4AiK00g0LcmR1M";
+const String stripePublishableKey =
+    "pk_test_51OuFaT00cpr6c22EPbiASuCZtGuUhGNbYVPnBWSa7qD1XakSzGclaIXRbOzgkbA4J8IaVHxxjWfVbt2jPRcvcwMc00Eh8xvPlm";
 
-  static const String paymentIntent =
-      "https://api.stripe.com/v1/payment_intents";
-}
+const String stripeSecretKey =
+    "sk_test_51OuFaT00cpr6c22EaepfzgtLDqaPXVJKCpGVGFvF3LjhmPMZg02U7HgYMzpPlpi2T5w4EmjFsAkVmry1ZYlweyXu00T5ujqx3N";

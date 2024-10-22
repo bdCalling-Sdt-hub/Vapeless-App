@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:get/get.dart';
+import 'package:vapeless/helpers/app_routes.dart';
 import 'package:vapeless/helpers/my_extension.dart';
 
 import '../../../../utils/app_colors.dart';
@@ -107,9 +109,10 @@ class PremiumSubcription extends StatelessWidget {
                 ],
               ),
             ),
-
-
-            const CommonButton(titleText: "Upgrade to Quit"),
+            CommonButton(
+              titleText: "Upgrade to Quit",
+              onTap: () => Get.toNamed(AppRoutes.selectPaymentMethod),
+            ),
           ],
         ),
       ),

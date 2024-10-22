@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
+import 'package:vapeless/utils/payment_key.dart';
 import 'helpers/app_routes.dart';
 import 'helpers/dependency_injection.dart';
 import 'helpers/prefs_helper.dart';
@@ -17,6 +19,8 @@ Future<void> main() async {
   await PrefsHelper.getAllPrefData();
   NotificationService.initLocalNotification();
   SocketServices.connectToSocket();
+  Stripe.publishableKey = stripePublishableKey;
+
 
   runApp(const MyApp());
 }
