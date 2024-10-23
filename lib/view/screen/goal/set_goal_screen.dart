@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vapeless/helpers/app_routes.dart';
 import 'package:vapeless/helpers/my_extension.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import 'package:vapeless/utils/app_string.dart';
 import 'package:vapeless/view/component/button/common_button.dart';
 import 'package:vapeless/view/component/text/common_text.dart';
 import 'package:vapeless/view/component/text_field/common_text_field.dart';
-
-import '../../../utils/app_icons.dart';
-import '../../component/image/common_image.dart';
 
 class SetGoalScreen extends StatelessWidget {
   const SetGoalScreen({super.key});
@@ -40,7 +36,7 @@ class SetGoalScreen extends StatelessWidget {
           children: [
             20.height,
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   color: AppColors.bg4,
                   borderRadius: BorderRadius.circular(12),
@@ -93,7 +89,7 @@ class SetGoalScreen extends StatelessWidget {
             50.height,
             Container(
               width: double.infinity,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                   color: AppColors.bg4,
                   borderRadius: BorderRadius.circular(12),
@@ -116,8 +112,8 @@ class SetGoalScreen extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              padding: EdgeInsets.all(16),
-              margin: EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.all(16),
+              margin: const EdgeInsets.only(top: 20),
               decoration: BoxDecoration(
                   color: AppColors.bg4,
                   borderRadius: BorderRadius.circular(12),
@@ -134,7 +130,7 @@ class SetGoalScreen extends StatelessWidget {
               ),
             ),
             70.height,
-            CommonButton(titleText: AppString.setGoal)
+            const CommonButton(titleText: AppString.setGoal)
           ],
         ),
       ),
