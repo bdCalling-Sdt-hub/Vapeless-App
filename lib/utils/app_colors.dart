@@ -24,4 +24,6 @@ class AppColors {
   static const bg4 = Color(0xff181C2D);
   static const ok = Color(0xff12A873);
   static const dropShadow = Color(0xff1991A9);
+  static const blueNormal = Color(0xff1991A9);
+  static const yellow = Color(0xffFFCC00);
 }

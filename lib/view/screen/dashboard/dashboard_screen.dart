@@ -140,7 +140,10 @@ class DashboardScreen extends StatelessWidget {
               child: PuffsResiue(),
             ),
             20.height,
-            const CommonButton(titleText: AppString.goals),
+            CommonButton(
+              titleText: AppString.goals,
+              onTap: () => Get.toNamed(AppRoutes.goalsScreen),
+            ),
             20.height,
             const GoalsDashboard(),
             20.height,

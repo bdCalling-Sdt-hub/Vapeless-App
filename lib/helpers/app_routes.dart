@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
 import 'package:vapeless/view/screen/dashboard/dashboard_screen.dart';
+import 'package:vapeless/view/screen/goal/friends_and_progress.dart';
 import 'package:vapeless/view/screen/goal/goal_setting.dart';
+import 'package:vapeless/view/screen/goal/goals_screen.dart';
+import 'package:vapeless/view/screen/goal/group_goals_screen.dart';
 import 'package:vapeless/view/screen/goal/set_goal_screen.dart';
 import 'package:vapeless/view/screen/payment/select_payment_method.dart';
 import 'package:vapeless/view/screen/question/first_question_screen.dart';
@@ -54,6 +57,9 @@ class AppRoutes {
   static const String goalSetting = "/goal_setting.dart";
   static const String setGoal = "/set_goal_screen.dart";
   static const String recovery = "/recovery_screen.dart";
+  static const String goalsScreen = "/goals_screen.dart";
+  static const String groupGoalsScreen = "/group_goals_screen.dart";
+  static const String friendsAndProgress = "/friends_and_progress.dart";
 
   static List<GetPage> routes = [
     GetPage(
@@ -159,6 +165,18 @@ class AppRoutes {
     GetPage(
         name: recovery,
         page: () => RecoveryScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: goalsScreen,
+        page: () => GoalsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: groupGoalsScreen,
+        page: () => GroupGoalsScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: friendsAndProgress,
+        page: () => FriendsAndProgress(),
         transition: Transition.rightToLeftWithFade),
   ];
 }

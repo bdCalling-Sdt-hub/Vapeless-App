@@ -124,4 +124,16 @@ class AppString {
   static const String goals = "GOALS";
   static const String yourPathToBeingVapeFree = "Your Path To Being Vape-Free";
   static const String healingProgress = "Healing Progress";
+  static const String groupGoals = "Group Goals";
+  static const String friendsProgress = "Friends & Progress";
+  static const String teamContribution = "Team Contributions";
+  static const String reward = "Reward";
+  static const String rewardDetails = "Reach the goal and unlock a special group achivement Badge!";
+  static const String groupGoalsSettings = "Group goals settings";
+  static const String challengeDuration = "Challenge Duration";
+  static const String setChallengeDuration = "Set challenge Duration";
+  static const String addFriends = "Add Friends";
+  static const String searchByNameOrEmail = "Search by name or email";
+  static const String yourFriends = "Your Friends";
+  static const String globalLeaderboard = "Global Leaderboard";
 }

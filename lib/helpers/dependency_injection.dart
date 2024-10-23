@@ -16,6 +16,8 @@ import '../controllers/common_controller/setting/privacy_policy_controller.dart'
 import '../controllers/common_controller/setting/setting_controller.dart';
 import '../controllers/common_controller/setting/terms_of_services_controller.dart';
 import '../controllers/dashboard/dashboard_controller.dart';
+import '../controllers/goal/friends_and_progress_controller.dart';
+import '../controllers/goal/group_goal_controller.dart';
 import '../controllers/recovery_controller.dart';
 
 class DependencyInjection extends Bindings {
@@ -38,5 +40,7 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => GoalSettingController(), fenix: true);
     Get.lazyPut(() => SetGoalController(), fenix: true);
     Get.lazyPut(() => RecoveryController(), fenix: true);
+    Get.lazyPut(() => GroupGoalsController(), fenix: true);
+    Get.lazyPut(() => FriendsAndProgressController(), fenix: true);
   }
 }
