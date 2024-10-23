@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:vapeless/controllers/goal/goal_setting.dart';
+import 'package:vapeless/controllers/goal/set_goal_controller.dart';
 import 'package:vapeless/controllers/question_controller.dart';
 import 'package:vapeless/controllers/subscription_controller.dart';
 
@@ -15,6 +16,7 @@ import '../controllers/common_controller/setting/privacy_policy_controller.dart'
 import '../controllers/common_controller/setting/setting_controller.dart';
 import '../controllers/common_controller/setting/terms_of_services_controller.dart';
 import '../controllers/dashboard/dashboard_controller.dart';
+import '../controllers/recovery_controller.dart';
 
 class DependencyInjection extends Bindings {
   @override
@@ -34,5 +36,7 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => SubscriptionController(), fenix: true);
     Get.lazyPut(() => DashboardController(), fenix: true);
     Get.lazyPut(() => GoalSettingController(), fenix: true);
+    Get.lazyPut(() => SetGoalController(), fenix: true);
+    Get.lazyPut(() => RecoveryController(), fenix: true);
   }
 }

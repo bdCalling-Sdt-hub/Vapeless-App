@@ -6,6 +6,7 @@ import 'package:vapeless/helpers/my_extension.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import 'package:vapeless/utils/app_icons.dart';
 import 'package:vapeless/utils/app_string.dart';
+import 'package:vapeless/view/component/button/common_button.dart';
 import 'package:vapeless/view/component/image/common_image.dart';
 import 'package:vapeless/view/component/text/common_text.dart';
 import 'package:vapeless/view/screen/dashboard/widgets/dashboard_item.dart';
@@ -73,7 +74,6 @@ class DashboardScreen extends StatelessWidget {
                   CommonText(
                     text: AppString.tapToCount,
                     color: AppColors.p1,
-                    top: 20,
                   ),
                   CommonText(
                     text: "30",
@@ -83,7 +83,17 @@ class DashboardScreen extends StatelessWidget {
                   CommonText(
                     text: AppString.puffsToday,
                     color: AppColors.p1,
-                  )
+                  ),
+                  CommonText(
+                    text: "-2.18ml consumed",
+                    color: AppColors.t4,
+                    fontSize: 10,
+                  ),
+                  CommonText(
+                    text: "54.50mg nicotine",
+                    color: AppColors.t4,
+                    fontSize: 12,
+                  ),
                 ],
               ),
             ).center,
@@ -129,6 +139,8 @@ class DashboardScreen extends StatelessWidget {
               height: 200,
               child: PuffsResiue(),
             ),
+            20.height,
+            const CommonButton(titleText: AppString.goals),
             20.height,
             const GoalsDashboard(),
             20.height,

@@ -14,4 +14,11 @@ class AppIcons {
   static const String recovery = "$baseurl/recovery.svg";
   static const String dailyLimit = "$baseurl/daily_limit.svg";
   static const String nicotineStrength = "$baseurl/nicotineStrength.svg";
+  static const String bloodPressure = "$baseurl/blood_pressure.svg";
+  static const String energyLevels = "$baseurl/energy_levels.svg";
+  static const String fitness = "$baseurl/fitness.svg";
+  static const String function = "$baseurl/function.svg";
+  static const String heartHealth = "$baseurl/heart_health.svg";
+  static const String nicotineCravings = "$baseurl/nicotine_cravings.svg";
+  static const String smell = "$baseurl/smell.svg";
 }

@@ -121,4 +121,7 @@ class AppString {
   static const String setGoal = "SET GOAL";
   static const String daysUntilYourQuitDate = "Days until your quit date";
   static const String setGoalDetails = "Setting a quit date is a powerful first step. We’re here to support you every step of the way. You’ve got this!";
+  static const String goals = "GOALS";
+  static const String yourPathToBeingVapeFree = "Your Path To Being Vape-Free";
+  static const String healingProgress = "Healing Progress";
 }

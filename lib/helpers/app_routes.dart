@@ -5,6 +5,7 @@ import 'package:vapeless/view/screen/goal/set_goal_screen.dart';
 import 'package:vapeless/view/screen/payment/select_payment_method.dart';
 import 'package:vapeless/view/screen/question/first_question_screen.dart';
 import 'package:vapeless/view/screen/question/vapeless_profile_screen.dart';
+import 'package:vapeless/view/screen/recovery/recovery_screen.dart';
 
 import '../view/screen/common_screen/auth/change_password/change_password_screen.dart';
 import '../view/screen/common_screen/auth/forgot password/create_password.dart';
@@ -52,6 +53,7 @@ class AppRoutes {
   static const String dashboard = "/dashboard_screen.dart";
   static const String goalSetting = "/goal_setting.dart";
   static const String setGoal = "/set_goal_screen.dart";
+  static const String recovery = "/recovery_screen.dart";
 
   static List<GetPage> routes = [
     GetPage(
@@ -153,6 +155,10 @@ class AppRoutes {
     GetPage(
         name: setGoal,
         page: () => SetGoalScreen(),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: recovery,
+        page: () => RecoveryScreen(),
         transition: Transition.rightToLeftWithFade),
   ];
 }
