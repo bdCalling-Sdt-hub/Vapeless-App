@@ -108,4 +108,10 @@ class AppString {
   static const String dailyAvg = "Daily Avg";
   static const String streak = "Streak";
   static const String gap = "Gap";
+  static const String customizeYourLimits = "Customize your limits";
+  static const String dailyLimitsDetails = "Set a daily target to gradually reduce your usage. Recommended: 100 puffs per day";
+  static const String nicotineStrength = "Nicotine strength";
+  static const String nicotineStrengthDetails = "Higher strength means more nicotine per puff. Consider gradually reducing strength as part of your journey.";
+  static const String deviceSettings = "Device Settings";
+  static const String deviceSettingsDetails = "Select your device capacity to help track liquid consumption.";
 }

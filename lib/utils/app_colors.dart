@@ -19,7 +19,8 @@ class AppColors {
   static const nav = Color(0xff18BBFF);
   static const inputBar = Color(0xff323A59);
   static const bg1 = Color(0xff020617);
+  static const bg2 = Color(0xff0C1020);
   static const bg4 = Color(0xff181C2D);
   static const ok = Color(0xff12A873);
-  static const dropShadow = Color(0xff1991A9) ;
+  static const dropShadow = Color(0xff1991A9);
 }

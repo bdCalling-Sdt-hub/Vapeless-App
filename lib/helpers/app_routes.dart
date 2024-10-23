@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:vapeless/view/screen/dashboard/dashboard_screen.dart';
+import 'package:vapeless/view/screen/goal/goal_setting.dart';
 import 'package:vapeless/view/screen/payment/select_payment_method.dart';
 import 'package:vapeless/view/screen/question/first_question_screen.dart';
 import 'package:vapeless/view/screen/question/vapeless_profile_screen.dart';
@@ -48,6 +49,7 @@ class AppRoutes {
   static const String subscription = "/subscription_screen.dart";
   static const String selectPaymentMethod = "/select_payment_method.dart";
   static const String dashboard = "/dashboard_screen.dart";
+  static const String goalSetting = "/goal_setting.dart";
 
   static List<GetPage> routes = [
     GetPage(
@@ -138,12 +140,13 @@ class AppRoutes {
         name: selectPaymentMethod,
         page: () => SelectPaymentMethod(),
         transition: Transition.rightToLeftWithFade),
-
-GetPage(
+    GetPage(
         name: dashboard,
         page: () => DashboardScreen(),
         transition: Transition.rightToLeftWithFade),
-
-
+    GetPage(
+        name: goalSetting,
+        page: () => GoalSetting(),
+        transition: Transition.rightToLeftWithFade),
   ];
 }

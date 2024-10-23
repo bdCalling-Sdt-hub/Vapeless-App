@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:vapeless/helpers/app_routes.dart';
 import 'package:vapeless/helpers/my_extension.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import 'package:vapeless/utils/app_icons.dart';
@@ -34,11 +36,13 @@ class DashboardScreen extends StatelessWidget {
             ),
           ],
         ),
-        actions: const [
+        actions: [
           GlowingIcon(icon: Icons.access_time),
-          SizedBox(width: 20),
-          GlowingIcon(icon: Icons.settings),
-          SizedBox(width: 20),
+          const SizedBox(width: 20),
+          GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.goalSetting),
+              child: const GlowingIcon(icon: Icons.settings)),
+          const SizedBox(width: 20),
         ],
       ),
       body: SingleChildScrollView(

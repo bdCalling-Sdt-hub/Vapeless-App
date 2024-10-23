@@ -14,7 +14,7 @@ Widget subscriptionItem(text) {
           imageType: ImageType.svg,
         ),
         4.width,
-        CommonText(text: text)
+        CommonText(text: text, fontSize: 12,)
       ],
     ),
   );

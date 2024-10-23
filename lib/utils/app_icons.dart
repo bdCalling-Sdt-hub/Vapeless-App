@@ -12,4 +12,6 @@ class AppIcons {
   static const String dashboard = "$baseurl/dashboard.svg";
   static const String profile = "$baseurl/profile.svg";
   static const String recovery = "$baseurl/recovery.svg";
+  static const String dailyLimit = "$baseurl/daily_limit.svg";
+  static const String nicotineStrength = "$baseurl/nicotineStrength.svg";
 }

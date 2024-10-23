@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:vapeless/controllers/goal/goal_setting.dart';
 import 'package:vapeless/controllers/question_controller.dart';
 import 'package:vapeless/controllers/subscription_controller.dart';
 
@@ -32,5 +33,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => QuestionController(), fenix: true);
     Get.lazyPut(() => SubscriptionController(), fenix: true);
     Get.lazyPut(() => DashboardController(), fenix: true);
+    Get.lazyPut(() => GoalSettingController(), fenix: true);
   }
 }
