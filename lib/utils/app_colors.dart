@@ -14,6 +14,7 @@ class AppColors {
   static const t2 = Color(0xff8A8E9E);
   static const t3 = Color(0xffEBECF0);
   static const t4 = Color(0xffEBECF0);
+  static const t5 = Color(0xffF5F6FA);
   static const t7 = Color(0xff0F384D);
   static const p1 = Color(0xff1991A9);
   static const nav = Color(0xff18BBFF);

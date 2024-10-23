@@ -44,6 +44,7 @@ class CommonButton extends StatelessWidget {
         onPressed: onTap,
         style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(buttonColor),
+            padding: WidgetStateProperty.all(EdgeInsets.zero),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(buttonRadius.r),

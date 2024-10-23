@@ -114,4 +114,11 @@ class AppString {
   static const String nicotineStrengthDetails = "Higher strength means more nicotine per puff. Consider gradually reducing strength as part of your journey.";
   static const String deviceSettings = "Device Settings";
   static const String deviceSettingsDetails = "Select your device capacity to help track liquid consumption.";
+  static const String setQuitDate = "Set Quit Date";
+  static const String vapeFreeLifeStartsToday = "Vape-Free life starts today";
+  static const String quitDateGoals = "Quit Date Goals";
+  static const String yourGoal = "Your Goal";
+  static const String setGoal = "SET GOAL";
+  static const String daysUntilYourQuitDate = "Days until your quit date";
+  static const String setGoalDetails = "Setting a quit date is a powerful first step. We’re here to support you every step of the way. You’ve got this!";
 }

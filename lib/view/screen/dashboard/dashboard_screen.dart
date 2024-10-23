@@ -37,7 +37,9 @@ class DashboardScreen extends StatelessWidget {
           ],
         ),
         actions: [
-          GlowingIcon(icon: Icons.access_time),
+          GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.setGoal),
+              child: const GlowingIcon(icon: Icons.access_time)),
           const SizedBox(width: 20),
           GestureDetector(
               onTap: () => Get.toNamed(AppRoutes.goalSetting),
