@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vapeless/helpers/my_extension.dart';
 import '../../../utils/app_colors.dart';
 
 class CommonButton extends StatelessWidget {
@@ -19,6 +20,7 @@ class CommonButton extends StatelessWidget {
   final double buttonWidth;
 
   final bool isLoading;
+  final Widget? icon;
 
   const CommonButton(
       {this.onTap,
@@ -27,6 +29,7 @@ class CommonButton extends StatelessWidget {
       this.buttonColor = AppColors.primaryColor,
       this.titleSize = 16,
       this.buttonRadius = 10,
+      this.icon,
       this.titleWeight = FontWeight.w700,
       this.buttonHeight = 60,
       this.borderWidth = 1,
@@ -37,38 +40,43 @@ class CommonButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: buttonHeight.h,
-      width: buttonWidth.w,
-      child: ElevatedButton(
-        onPressed: onTap,
-        style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(buttonColor),
-            padding: WidgetStateProperty.all(EdgeInsets.zero),
-            shape: WidgetStateProperty.all(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(buttonRadius.r),
-                side: BorderSide(
-                    color: borderColor ?? AppColors.primaryColor,
-                    width: borderWidth.w),
-              ),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+          height: buttonHeight.h,
+          width: buttonWidth.w,
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF3786F3),
+                Color(0xFF0AB2D6),
+              ],
+              begin: Alignment(0.8, -0.9),
+              end: Alignment(-0.9, 0.9),
             ),
-            elevation: WidgetStateProperty.all(0)),
-        child: isLoading
-            ? Platform.isIOS
-                ? const CupertinoActivityIndicator()
-                : const CircularProgressIndicator()
-            : Text(
-                titleText,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                    color: titleColor,
-                    fontSize: titleSize.sp,
-                    fontWeight: titleWeight),
-              ),
-      ),
+            borderRadius: BorderRadius.circular(10), // Rounded corners
+          ),
+          child: isLoading
+              ? Platform.isIOS
+                  ? const CupertinoActivityIndicator()
+                  : const CircularProgressIndicator()
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (icon != null) icon!,
+                    10.width,
+                    Text(
+                      titleText,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                          color: titleColor,
+                          fontSize: titleSize.sp,
+                          fontWeight: titleWeight),
+                    ),
+                  ],
+                )),
     );
   }
 }
