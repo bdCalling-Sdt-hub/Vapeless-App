@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../helpers/app_routes.dart';
+import '../../../../helpers/prefs_helper.dart';
 import '../../../component/other_widgets/common_loader.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,15 +23,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        // if (PrefsHelper.isLogIn) {
-        //   if (PrefsHelper.myRole == 'consultant') {
-        //     Get.offAllNamed(AppRoutes.doctorHome);
-        //   } else {
-        //     Get.offAllNamed(AppRoutes.patientsHome);
-        //   }
-        // } else {
-        // Get.offAllNamed(AppRoutes.onboarding);
-        Get.offAllNamed(AppRoutes.dashboard);
+        if (PrefsHelper.isLogIn) {
+          Get.offAllNamed(AppRoutes.dashboard);
+        } else {
+          Get.offAllNamed(AppRoutes.onboarding);
+        }
       },
     );
     super.initState();

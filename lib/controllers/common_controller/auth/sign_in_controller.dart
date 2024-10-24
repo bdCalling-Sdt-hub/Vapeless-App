@@ -17,7 +17,7 @@ class SignInController extends GetxController {
       TextEditingController(text: kDebugMode ? 'hello123' : "");
 
   Future<void> signInUser() async {
-    Get.toNamed(AppRoutes.firstQuestion);
+    Get.toNamed(AppRoutes.dashboard);
     return;
     isLoading = true;
     update();

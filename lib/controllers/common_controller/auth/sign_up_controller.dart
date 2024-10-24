@@ -115,7 +115,7 @@ class SignUpController extends GetxController {
   }
 
   Future<void> verifyOtpRepo() async {
-    Get.toNamed(AppRoutes.signIn);
+    Get.toNamed(AppRoutes.firstQuestion);
     return;
     isLoadingVerify = true;
     update();
