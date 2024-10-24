@@ -4,6 +4,7 @@ import 'package:vapeless/controllers/goal/set_goal_controller.dart';
 import 'package:vapeless/controllers/question_controller.dart';
 import 'package:vapeless/controllers/subscription_controller.dart';
 
+import '../controllers/breathing_controller.dart';
 import '../controllers/common_controller/auth/change_password_controller.dart';
 import '../controllers/common_controller/auth/forget_password_controller.dart';
 import '../controllers/common_controller/auth/sign_in_controller.dart';
@@ -42,5 +43,6 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => RecoveryController(), fenix: true);
     Get.lazyPut(() => GroupGoalsController(), fenix: true);
     Get.lazyPut(() => FriendsAndProgressController(), fenix: true);
+    Get.lazyPut(() => BreathingController(), fenix: true);
   }
 }

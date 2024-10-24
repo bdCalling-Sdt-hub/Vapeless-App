@@ -109,18 +109,22 @@ class AppString {
   static const String streak = "Streak";
   static const String gap = "Gap";
   static const String customizeYourLimits = "Customize your limits";
-  static const String dailyLimitsDetails = "Set a daily target to gradually reduce your usage. Recommended: 100 puffs per day";
+  static const String dailyLimitsDetails =
+      "Set a daily target to gradually reduce your usage. Recommended: 100 puffs per day";
   static const String nicotineStrength = "Nicotine strength";
-  static const String nicotineStrengthDetails = "Higher strength means more nicotine per puff. Consider gradually reducing strength as part of your journey.";
+  static const String nicotineStrengthDetails =
+      "Higher strength means more nicotine per puff. Consider gradually reducing strength as part of your journey.";
   static const String deviceSettings = "Device Settings";
-  static const String deviceSettingsDetails = "Select your device capacity to help track liquid consumption.";
+  static const String deviceSettingsDetails =
+      "Select your device capacity to help track liquid consumption.";
   static const String setQuitDate = "Set Quit Date";
   static const String vapeFreeLifeStartsToday = "Vape-Free life starts today";
   static const String quitDateGoals = "Quit Date Goals";
   static const String yourGoal = "Your Goal";
   static const String setGoal = "SET GOAL";
   static const String daysUntilYourQuitDate = "Days until your quit date";
-  static const String setGoalDetails = "Setting a quit date is a powerful first step. We’re here to support you every step of the way. You’ve got this!";
+  static const String setGoalDetails =
+      "Setting a quit date is a powerful first step. We’re here to support you every step of the way. You’ve got this!";
   static const String goals = "GOALS";
   static const String yourPathToBeingVapeFree = "Your Path To Being Vape-Free";
   static const String healingProgress = "Healing Progress";
@@ -128,7 +132,8 @@ class AppString {
   static const String friendsProgress = "Friends & Progress";
   static const String teamContribution = "Team Contributions";
   static const String reward = "Reward";
-  static const String rewardDetails = "Reach the goal and unlock a special group achivement Badge!";
+  static const String rewardDetails =
+      "Reach the goal and unlock a special group achivement Badge!";
   static const String groupGoalsSettings = "Group goals settings";
   static const String challengeDuration = "Challenge Duration";
   static const String setChallengeDuration = "Set challenge Duration";
@@ -138,8 +143,14 @@ class AppString {
   static const String globalLeaderboard = "Global Leaderboard";
   static const String support = "Support";
   static const String country = "Country";
-  static const String supportDetails = "Need help? We're here for you! Feel free to reach out if you encounter any issues.";
+  static const String supportDetails =
+      "Need help? We're here for you! Feel free to reach out if you encounter any issues.";
   static const String chatWithUs = "Chat With Us";
   static const String submit = "Submit";
-
+  static const String tapAndHoldToBreath = "Tap and hold to breath in";
+  static const String breaths = "Breaths";
+  static const String time = "time";
+  static const String reset = "Reset";
+  static const String findYourCalm = "Find your calm";
+  static const String breathDetails = "Deep breath reduces cravings and anxiety. You’re making great progress!";
 }

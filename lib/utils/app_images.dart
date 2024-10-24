@@ -10,7 +10,7 @@ class AppImages {
   static const String james = "$baseurl/james.png" ;
   static const String you = "$baseurl/you.png" ;
   static const String breathingOff = "$baseurl/breathing_off.png" ;
-  static const String breathingOn = "$baseurl/breathingOn.png" ;
+  static const String breathingOn = "$baseurl/breathing_on.png" ;
 
 
 

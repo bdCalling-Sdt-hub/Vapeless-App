@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:vapeless/view/screen/breathing_screen.dart';
 import 'package:vapeless/view/screen/common_screen/setting/support_screen.dart';
 import 'package:vapeless/view/screen/dashboard/dashboard_screen.dart';
 import 'package:vapeless/view/screen/goal/friends_and_progress.dart';
@@ -62,6 +63,7 @@ class AppRoutes {
   static const String groupGoalsScreen = "/group_goals_screen.dart";
   static const String friendsAndProgress = "/friends_and_progress.dart";
   static const String supportScreen = "/support_screen.dart";
+  static const String breathingScreen = "/breathing_screen.dart";
 
   static List<GetPage> routes = [
     GetPage(
@@ -184,5 +186,11 @@ class AppRoutes {
         name: supportScreen,
         page: () => SupportScreen(),
         transition: Transition.rightToLeftWithFade),
+    GetPage(
+        name: breathingScreen,
+        page: () => BreathingScreen(),
+        transition: Transition.rightToLeftWithFade),
+
+
   ];
 }
