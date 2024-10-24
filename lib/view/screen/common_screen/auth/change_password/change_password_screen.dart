@@ -85,22 +85,20 @@ class ChangePasswordScreen extends StatelessWidget {
                       color: AppColors.t4,
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: () => Get.toNamed(AppRoutes.forgotPassword),
-                      child: CommonText(
-                        text: AppString.forgotPassword,
-                        color: AppColors.primaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18.sp,
-                        top: 16.h,
-                        bottom: 20.h,
-                      ),
+                  GestureDetector(
+                    onTap: () => Get.toNamed(AppRoutes.forgotPassword),
+                    child: CommonText(
+                      text: AppString.forgotPassword,
+                      color: AppColors.t2,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      top: 16.h,
+                      bottom: 20.h,
                     ),
-                  ),
+                  ).end,
+                  100.height,
                   CommonButton(
-                    titleText: AppString.confirm,
+                    titleText: AppString.submit,
                     isLoading: controller.isLoading,
                     onTap: () {
                       if (formKey.currentState!.validate()) {

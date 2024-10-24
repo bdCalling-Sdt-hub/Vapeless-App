@@ -140,5 +140,6 @@ class AppString {
   static const String country = "Country";
   static const String supportDetails = "Need help? We're here for you! Feel free to reach out if you encounter any issues.";
   static const String chatWithUs = "Chat With Us";
+  static const String submit = "Submit";
 
 }
