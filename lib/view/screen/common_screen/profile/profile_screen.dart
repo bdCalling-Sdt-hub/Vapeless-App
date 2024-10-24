@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:vapeless/helpers/my_extension.dart';
+import 'package:vapeless/utils/app_colors.dart';
 import '../../../../controllers/common_controller/profile/profile_controller.dart';
 import '../../../../helpers/app_routes.dart';
 import '../../../../utils/app_images.dart';
@@ -33,14 +35,14 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 Center(
                   child: CircleAvatar(
-                    radius: 85.sp,
+                    radius: 60.sp,
                     backgroundColor: Colors.transparent,
                     child: ClipOval(
                       child: CommonImage(
                         imageSrc: AppImages.profile,
                         imageType: ImageType.png,
-                        height: 170,
-                        width: 170,
+                        height: 120,
+                        width: 120,
                         defaultImage: AppImages.profile,
                       ),
                     ),
@@ -50,7 +52,6 @@ class ProfileScreen extends StatelessWidget {
                   text: "Naimul Hassan",
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
-                  top: 20,
                   bottom: 24,
                 ),
                 Item(
@@ -59,38 +60,26 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () => Get.toNamed(AppRoutes.editProfile),
                 ),
                 Item(
+                  icon: Icons.group,
+                  title: AppString.goals,
+                  onTap: () => Get.toNamed(AppRoutes.goalsScreen),
+                ),
+                Item(
+                  icon: Icons.headset_mic_rounded,
+                  title: AppString.support,
+                  onTap: () => Get.toNamed(AppRoutes.supportScreen),
+                ),
+                Item(
                   icon: Icons.settings,
                   title: AppString.settings,
                   onTap: () => Get.toNamed(AppRoutes.setting),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.language),
-                          CommonText(
-                            text: controller.selectedLanguage,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 18,
-                            left: 16,
-                          ),
-                          const Spacer(),
-                          PopUpMenu(
-                              items: controller.languages,
-                              selectedItem: [controller.selectedLanguage],
-                              onTap: controller.selectLanguage)
-                        ],
-                      ),
-                      const Divider()
-                    ],
-                  ),
-                ),
+                50.height,
                 Item(
                   icon: Icons.logout,
                   title: AppString.logOut,
-                  onTap: () => logOutPopUp(),
+                  onTap: () => Get.toNamed(AppRoutes.setting),
+                  bgColor: AppColors.bg4 ,
                 ),
               ],
             ),

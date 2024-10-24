@@ -79,6 +79,7 @@ class EditProfile extends StatelessWidget {
                       titleText: AppString.saveAndChanges,
                       onTap: () {
                         if (formKey.currentState!.validate()) {
+                          Get.back();
                           // Get.toNamed(AppRoutes.patientsProfile);
                         }
                       }),

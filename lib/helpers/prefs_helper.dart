@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vapeless/helpers/app_routes.dart';
 
 
 class PrefsHelper extends GetxController {
@@ -61,7 +62,7 @@ class PrefsHelper extends GetxController {
     preferences.setBool("isNotifications", true);
     preferences.setString("mySubscription", "shopping");
 
-    // Get.offAllNamed(AppRoutes.login);
+    Get.offAllNamed(AppRoutes.signIn);
     getAllPrefData();
   }
 

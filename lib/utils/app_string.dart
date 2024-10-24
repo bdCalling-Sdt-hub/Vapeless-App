@@ -136,4 +136,9 @@ class AppString {
   static const String searchByNameOrEmail = "Search by name or email";
   static const String yourFriends = "Your Friends";
   static const String globalLeaderboard = "Global Leaderboard";
+  static const String support = "Support";
+  static const String country = "Country";
+  static const String supportDetails = "Need help? We're here for you! Feel free to reach out if you encounter any issues.";
+  static const String chatWithUs = "Chat With Us";
+
 }

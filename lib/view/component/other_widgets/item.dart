@@ -12,8 +12,9 @@ class Item extends StatelessWidget {
       this.image = "",
       this.disableDivider = false,
       this.onTap,
-      this.color = AppColors.black,
-      this.vertical = 4,
+      this.color = AppColors.white,
+      this.bgColor = AppColors.inputBar,
+      this.vertical = 12,
       this.horizontal = 24,
       this.disableIcon = false});
 
@@ -24,6 +25,7 @@ class Item extends StatelessWidget {
   final bool disableIcon;
   final VoidCallback? onTap;
   final Color color;
+  final Color bgColor;
   final double vertical;
   final double horizontal;
 
@@ -31,36 +33,36 @@ class Item extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Padding(
+      child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: horizontal.w, vertical: vertical.h),
-        child: Column(
+        margin: const EdgeInsets.only(top: 16),
+        decoration: BoxDecoration(
+            color: bgColor, borderRadius: BorderRadius.circular(12)),
+        child: Row(
           children: [
-            Row(
-              children: [
-                icon != null
-                    ? Icon(
-                        icon,
-                        color: color,
-                      )
-                    : CommonImage(imageSrc: image),
-                CommonText(
-                  text: title,
-                  color: color,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 18,
-                  left: 16,
-                ),
-                const Spacer(),
-                disableIcon
-                    ? const SizedBox()
-                    : Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        size: 20.sp,
-                      )
-              ],
+            icon != null
+                ? Icon(
+                    icon,
+                    color: color,
+                  )
+                : CommonImage(imageSrc: image),
+            CommonText(
+              text: title,
+              color: color,
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              left: 16,
             ),
-            disableDivider ? const SizedBox() : const Divider()
+            const Spacer(),
+            disableIcon
+                ? const SizedBox()
+                : Icon(
+                    Icons.arrow_forward_ios_outlined,
+                    size: 20.sp,
+                    color: AppColors.white,
+
+                  )
           ],
         ),
       ),
