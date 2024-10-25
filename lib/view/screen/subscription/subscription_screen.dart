@@ -26,8 +26,8 @@ class SubscriptionScreen extends StatelessWidget {
         body: GetBuilder<SubscriptionController>(
           builder: (controller) => slider.CarouselSlider(
             options: slider.CarouselOptions(
-              autoPlay: true,
-              height: Get.height * 0.7,
+              autoPlay: false,
+              height: Get.height * 0.75,
               aspectRatio: 16 / 9,
               viewportFraction: 0.8,
               initialPage: 0,

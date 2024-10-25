@@ -38,7 +38,7 @@ class _VerifyUserState extends State<VerifyUser> {
       body: GetBuilder<SignUpController>(
         builder: (controller) {
           return SingleChildScrollView(
-            padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 20.w),
+            padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 16.w),
             child: Form(
               key: formKey,
               child: Column(
@@ -65,7 +65,7 @@ class _VerifyUserState extends State<VerifyUser> {
                         shape: PinCodeFieldShape.box,
                         borderRadius: BorderRadius.circular(16.r),
                         fieldHeight: 60.h,
-                        fieldWidth: 60.w,
+                        fieldWidth: 50.w,
                         activeFillColor: AppColors.transparent,
                         selectedFillColor: AppColors.transparent,
                         inactiveFillColor: AppColors.transparent,

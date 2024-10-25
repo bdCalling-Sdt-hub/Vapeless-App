@@ -45,7 +45,8 @@ class FreeSubscription extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12)),
               child: const Center(
                   child: CommonText(
-                text: "Try VapeLess Premium Free for 30 Puffs",
+                    maxLines: 2,
+                text: "Try VapeLess Premium Free \nfor 30 Puffs",
                 color: AppColors.nav,
               )),
             ),
@@ -94,6 +95,7 @@ class FreeSubscription extends StatelessWidget {
               onTap: () => Get.toNamed(AppRoutes.dashboard),
             ),
             const CommonText(
+              maxLines: 3,
               text: AppString.trialDetails,
               fontSize: 12,
               top: 12,

@@ -246,19 +246,20 @@ class _GoalSettingState extends State<GoalSetting> {
                       top: 10,
                     ).start,
                     SizedBox(
-                      height: 34,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: controller.capacityList.length,
-                        itemBuilder: (context, index) => Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                          margin: EdgeInsets.all(4),
-                          decoration: BoxDecoration(
-                              color: AppColors.bg2,
-                              borderRadius: BorderRadius.circular(8)),
-                          child:
-                              CommonText(text: controller.capacityList[index]),
+                      height: 32,
+                      child: Center(
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: controller.capacityList.length,
+                          itemBuilder: (context, index) => Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            margin: EdgeInsets.only(left: 14, top: 4, bottom: 4),
+                            decoration: BoxDecoration(
+                                color: AppColors.bg2,
+                                borderRadius: BorderRadius.circular(8)),
+                            child:
+                                CommonText(text: controller.capacityList[index]),
+                          ),
                         ),
                       ),
                     ),
