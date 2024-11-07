@@ -67,17 +67,14 @@ class SignUpController extends GetxController {
   }
 
   signUpUser() async {
-    Get.toNamed(AppRoutes.verifyUser);
-    return;
+
     isLoading = true;
     update();
     Map<String, String> body = {
-      "fullName": nameController.text,
-      "email": emailController.text,
-      "phoneNumber": numberController.text,
-      "countryCode": countryCode,
-      "password": passwordController.text,
-      "role": selectRole.toLowerCase()
+      "fullName":"Rion",
+      "email":"fiditey393@gianes.com",
+      "password":"hello123",
+      "role":"user"
     };
 
     var response = await ApiService.postApi(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:vapeless/helpers/my_extension.dart';
+import 'package:vapeless/helpers/prefs_helper.dart';
 import 'package:vapeless/utils/app_colors.dart';
 import '../../../../controllers/common_controller/profile/profile_controller.dart';
 import '../../../../helpers/app_routes.dart';
@@ -75,11 +76,11 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () => Get.toNamed(AppRoutes.setting),
                 ),
                 50.height,
-                Item(
+                const Item(
                   icon: Icons.logout,
                   title: AppString.logOut,
-                  onTap: () => Get.toNamed(AppRoutes.setting),
-                  bgColor: AppColors.bg4 ,
+                  onTap: logOutPopUp,
+                  bgColor: AppColors.bg4,
                 ),
               ],
             ),
