@@ -16,7 +16,7 @@ class TermsOfServicesController extends GetxController {
       Get.put(TermsOfServicesController());
 
   geTermsOfServicesRepo() async {
-    return;
+
     status = Status.loading;
     update();
 

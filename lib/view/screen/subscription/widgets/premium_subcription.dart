@@ -3,7 +3,9 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:vapeless/helpers/app_routes.dart';
 import 'package:vapeless/helpers/my_extension.dart';
+import 'package:vapeless/models/subscription_model.dart';
 
+import '../../../../controllers/subscription_controller.dart';
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_string.dart';
 import '../../../component/button/common_button.dart';
@@ -11,7 +13,9 @@ import '../../../component/text/common_text.dart';
 import 'supcription_item.dart';
 
 class PremiumSubcription extends StatelessWidget {
-  const PremiumSubcription({super.key});
+  const PremiumSubcription({super.key, required this.subscriptionModel});
+
+  final SubscriptionModel subscriptionModel ;
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +48,12 @@ class PremiumSubcription extends StatelessWidget {
                   border: Border.all(color: AppColors.primaryColor),
                   color: AppColors.t7,
                   borderRadius: BorderRadius.circular(12)),
-              child: const Center(
+              child: Center(
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CommonText(
+                  const CommonText(
                     text: AppString.vapLessPremiumIsJust,
                     color: AppColors.nav,
                   ),
@@ -57,10 +61,11 @@ class PremiumSubcription extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CommonText(
-                        text: "\$5.99",
+                        text:
+                            "\$${SubscriptionController.instance.subscription.length >= 2 ? SubscriptionController.instance.subscription[1].price : ""}  ",
                         fontSize: 32,
                       ),
-                      CommonText(
+                      const CommonText(
                         text: "/week",
                         color: AppColors.nav,
                       ),

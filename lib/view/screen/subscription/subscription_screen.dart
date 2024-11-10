@@ -41,9 +41,15 @@ class SubscriptionScreen extends StatelessWidget {
                 currentIndex.value = index;
               },
             ),
-            items: const [
-              FreeSubscription(),
-              PremiumSubcription(),
+            items: [
+              if (controller.subscription.isNotEmpty)
+                FreeSubscription(
+                  subscriptionModel: controller.subscription[0],
+                ),
+              if (controller.subscription.length >= 2)
+                PremiumSubcription(
+                  subscriptionModel: controller.subscription[1],
+                ),
             ],
           ),
         ));

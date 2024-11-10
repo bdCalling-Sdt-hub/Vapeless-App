@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
@@ -25,19 +24,19 @@ class TermsOfServicesScreen extends StatelessWidget {
         ),
         body: GetBuilder<TermsOfServicesController>(
             builder: (controller) => switch (controller.status) {
-              Status.loading => const CommonLoader(),
-              Status.error => ErrorScreen(
-                  onTap: TermsOfServicesController.instance
-                      .geTermsOfServicesRepo()),
-              Status.completed => SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 24, horizontal: 20),
-                child: Column(
-                  children: [
-                    Html(data: controller.data.content),
-                  ],
-                ),
-              ),
-            }));
+                  Status.loading => const Center(child: CommonLoader()),
+                  Status.error => ErrorScreen(
+                      onTap: TermsOfServicesController.instance
+                          .geTermsOfServicesRepo()),
+                  Status.completed => SingleChildScrollView(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 24, horizontal: 20),
+                      child: Column(
+                        children: [
+                          Html(data: controller.data.content),
+                        ],
+                      ),
+                    ),
+                }));
   }
 }

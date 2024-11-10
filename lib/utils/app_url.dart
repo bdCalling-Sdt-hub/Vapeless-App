@@ -16,6 +16,7 @@ class AppUrls {
   static const notifications = "$baseUrl/notifications";
   static const vapingInfo = "$baseUrl/vaping-info";
   static const vapeStatisticsDashboard = "$baseUrl/vape-statistics/dashboard";
+  static const subscriptions = "$baseUrl/subscriptions";
   static const privacyPolicies = "$baseUrl/privacy-policies";
   static const termsOfServices = "$baseUrl/terms-and-conditions";
   static const chats = "$baseUrl/chats";

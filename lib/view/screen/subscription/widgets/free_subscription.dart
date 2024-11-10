@@ -9,8 +9,13 @@ import 'package:vapeless/view/component/button/common_button.dart';
 import 'package:vapeless/view/component/text/common_text.dart';
 import 'package:vapeless/view/screen/subscription/widgets/supcription_item.dart';
 
+import '../../../../models/subscription_model.dart';
+
 class FreeSubscription extends StatelessWidget {
-  const FreeSubscription({super.key});
+  const FreeSubscription({super.key, required this.subscriptionModel});
+
+  final SubscriptionModel subscriptionModel ;
+
 
   @override
   Widget build(BuildContext context) {

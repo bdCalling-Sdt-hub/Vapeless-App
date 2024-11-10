@@ -26,7 +26,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
         ),
         body: GetBuilder<PrivacyPolicyController>(
             builder: (controller) => switch (controller.status) {
-                  Status.loading => const CommonLoader(),
+                  Status.loading => const Center(child: CommonLoader()),
                   Status.error => ErrorScreen(
                       onTap: PrivacyPolicyController.instance
                           .getPrivacyPolicyRepo()),
