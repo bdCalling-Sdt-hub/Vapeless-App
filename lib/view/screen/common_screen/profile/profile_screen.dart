@@ -20,6 +20,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         centerTitle: true,
         title: const CommonText(
@@ -40,8 +41,12 @@ class ProfileScreen extends StatelessWidget {
                     backgroundColor: Colors.transparent,
                     child: ClipOval(
                       child: CommonImage(
-                        imageSrc: AppImages.profile,
-                        imageType: ImageType.png,
+                        imageSrc: controller.userModel.image.isEmpty
+                            ? AppImages.profile
+                            : controller.userModel.image,
+                        imageType: controller.userModel.image.isEmpty
+                            ? ImageType.png
+                            : ImageType.network,
                         height: 120,
                         width: 120,
                         defaultImage: AppImages.profile,

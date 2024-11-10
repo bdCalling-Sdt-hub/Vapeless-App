@@ -23,8 +23,8 @@ class ForgetPasswordController extends GetxController {
 
   String time = "00:00";
 
-  TextEditingController emailController =
-      TextEditingController(text: kDebugMode ? "user@gmail.com" : '');
+  TextEditingController emailController = TextEditingController(
+      text: kDebugMode ? "developernaimul00@gmail.com" : '');
   TextEditingController otpController =
       TextEditingController(text: kDebugMode ? '123456' : '');
   TextEditingController passwordController =
@@ -60,8 +60,7 @@ class ForgetPasswordController extends GetxController {
   }
 
   Future<void> forgotPasswordRepo() async {
-    Get.toNamed(AppRoutes.verifyEmail);
-    return;
+
     isLoadingEmail = true;
     update();
 
@@ -83,8 +82,7 @@ class ForgetPasswordController extends GetxController {
   ///<<<===================Verify Password Repo==============================>>>
 
   Future<void> verifyOtpRepo() async {
-    Get.toNamed(AppRoutes.createPassword);
-    return;
+
     isLoadingVerify = true;
     update();
     Map<String, String> body = {
@@ -111,11 +109,10 @@ class ForgetPasswordController extends GetxController {
   ///<<<===================Verify Password Repo==============================>>>
 
   Future<void> resetPasswordRepo() async {
-    Get.offAllNamed(AppRoutes.signIn);
-    return;
     isLoadingReset = true;
     update();
     Map<String, String> header = {
+      "Content-Type": "application/json",
       "Forget-password": "Forget-password $forgetPasswordToken",
     };
 

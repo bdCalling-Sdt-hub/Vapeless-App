@@ -61,6 +61,7 @@ class _VerifyUserState extends State<VerifyUser> {
                       cursorColor: AppColors.black,
                       appContext: (context),
                       autoFocus: true,
+                      textStyle: const TextStyle(color: AppColors.white),
                       pinTheme: PinTheme(
                         shape: PinCodeFieldShape.box,
                         borderRadius: BorderRadius.circular(16.r),
@@ -72,14 +73,14 @@ class _VerifyUserState extends State<VerifyUser> {
                         borderWidth: 0.5.w,
                         selectedColor: AppColors.primaryColor,
                         activeColor: AppColors.primaryColor,
-                        inactiveColor: AppColors.black,
+                        inactiveColor: AppColors.white,
                       ),
-                      length: 6,
+                      length: 4,
                       keyboardType: TextInputType.number,
                       autovalidateMode: AutovalidateMode.disabled,
                       enableActiveFill: true,
                       validator: (value) {
-                        if (value != null && value.length == 6) {
+                        if (value != null && value.length == 4) {
                           return null;
                         } else {
                           return AppString.otpIsInValid;

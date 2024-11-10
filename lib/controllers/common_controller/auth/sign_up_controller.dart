@@ -35,14 +35,12 @@ class SignUpController extends GetxController {
 
   TextEditingController nameController =
       TextEditingController(text: kDebugMode ? "Namimul Hassan" : "");
-  TextEditingController emailController =
-      TextEditingController(text: kDebugMode ? "developernaimul00@gmail.com" : '');
+  TextEditingController emailController = TextEditingController(
+      text: kDebugMode ? "developernaimul00@gmail.com" : '');
   TextEditingController passwordController =
       TextEditingController(text: kDebugMode ? 'hello123' : '');
   TextEditingController confirmPasswordController =
       TextEditingController(text: kDebugMode ? 'hello123' : '');
-  TextEditingController numberController =
-      TextEditingController(text: kDebugMode ? '1865965581' : '');
   TextEditingController otpController =
       TextEditingController(text: kDebugMode ? '123456' : '');
 
@@ -67,14 +65,13 @@ class SignUpController extends GetxController {
   }
 
   signUpUser() async {
-
     isLoading = true;
     update();
     Map<String, String> body = {
-      "fullName":"Rion",
-      "email":"fiditey393@gianes.com",
-      "password":"hello123",
-      "role":"user"
+      "fullName": nameController.text,
+      "email": emailController.text,
+      "password": passwordController.text,
+      "role": "user"
     };
 
     var response = await ApiService.postApi(
@@ -112,12 +109,13 @@ class SignUpController extends GetxController {
   }
 
   Future<void> verifyOtpRepo() async {
-    Get.toNamed(AppRoutes.firstQuestion);
-    return;
     isLoadingVerify = true;
     update();
     Map<String, String> body = {"otp": otpController.text};
-    Map<String, String> header = {"SignUpToken": "signUpToken $signUpToken"};
+    Map<String, String> header = {
+      "Content-Type": "application/json",
+      "SignUpToken": "signUpToken $signUpToken"
+    };
     var response =
         await ApiService.postApi(AppUrls.verifyEmail, body, header: header);
 
@@ -140,6 +138,8 @@ class SignUpController extends GetxController {
       PrefsHelper.setString("myEmail", PrefsHelper.myEmail);
       PrefsHelper.setString("myRole", PrefsHelper.myRole);
       PrefsHelper.setBool("isLogIn", PrefsHelper.isLogIn);
+
+      Get.toNamed(AppRoutes.firstQuestion);
 
       // if (PrefsHelper.myRole == 'consultant') {
       //   Get.toNamed(AppRoutes.personalInformation);

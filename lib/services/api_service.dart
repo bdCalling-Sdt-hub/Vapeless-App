@@ -24,17 +24,21 @@ class ApiService {
 
     Map<String, String> mainHeader = {
       'Authorization': "Bearer ${PrefsHelper.token}",
+      "Content-Type": "application/json",
       'Accept-Language': PrefsHelper.localizationLanguageCode,
     };
 
     if (kDebugMode) {
-      print("=======================================> url $mainHeader");
+
       print("==================================================> url $url");
+      print("==================================================> body $body");
+      print("==================================================> header ${header ?? mainHeader}");
     }
 
     try {
       final response = await http
-          .post(Uri.parse(url), body: body, headers: header ?? mainHeader)
+          .post(Uri.parse(url),
+              body: jsonEncode(body), headers: header ?? mainHeader)
           .timeout(const Duration(seconds: timeOut));
       responseJson = handleResponse(response);
     } on SocketException {
@@ -173,8 +177,6 @@ class ApiService {
             .timeout(const Duration(seconds: timeOut));
         responseJson = handleResponse(response);
       }
-
-
     } on SocketException {
       return ApiResponseModel(503, "No internet connection", '');
     } on FormatException {
@@ -233,13 +235,18 @@ class ApiService {
   ///<<<================== Api Response Status Code Handle ====================>>>
 
   static dynamic handleResponse(http.Response response) {
+    if (kDebugMode) {
+      print("=================>statusCode ${response.statusCode}");
+      print("=================> body ${response.body}");
+    }
+
     switch (response.statusCode) {
       case 200:
         return ApiResponseModel(response.statusCode,
             jsonDecode(response.body)['message'], response.body);
       case 201:
-        return ApiResponseModel(response.statusCode,
-            jsonDecode(response.body)['message'], response.body);
+        return ApiResponseModel(
+            200, jsonDecode(response.body)['message'], response.body);
       case 401:
         // Get.offAllNamed(AppRoutes.signInScreen);
         return ApiResponseModel(response.statusCode,

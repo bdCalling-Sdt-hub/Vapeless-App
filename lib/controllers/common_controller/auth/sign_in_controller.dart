@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+import 'package:vapeless/utils/app_utils.dart';
 
 import '../../../helpers/app_routes.dart';
 import '../../../helpers/prefs_helper.dart';
@@ -11,14 +12,12 @@ import '../../../utils/app_url.dart';
 class SignInController extends GetxController {
   bool isLoading = false;
 
-  TextEditingController emailController =
-      TextEditingController(text: kDebugMode ? 'developernaimul00@gmail.com' : '');
+  TextEditingController emailController = TextEditingController(
+      text: kDebugMode ? 'developernaimul00@gmail.com' : '');
   TextEditingController passwordController =
       TextEditingController(text: kDebugMode ? 'hello123' : "");
 
   Future<void> signInUser() async {
-    Get.toNamed(AppRoutes.dashboard);
-    return;
     isLoading = true;
     update();
 
@@ -30,7 +29,7 @@ class SignInController extends GetxController {
     var response = await ApiService.postApi(
       AppUrls.signIn,
       body,
-    ).timeout(const Duration(seconds: 30));
+    );
 
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
@@ -57,10 +56,12 @@ class SignInController extends GetxController {
       //   Get.offAllNamed(AppRoutes.patientsHome);
       // }
 
+      Get.offAllNamed(AppRoutes.dashboard);
+
       emailController.clear();
       passwordController.clear();
     } else {
-      Get.snackbar(response.statusCode.toString(), response.message);
+      Utils.snackBarMessage(response.statusCode.toString(), response.message);
     }
 
     isLoading = false;

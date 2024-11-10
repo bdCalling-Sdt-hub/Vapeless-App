@@ -57,9 +57,15 @@ class CommonButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10), // Rounded corners
           ),
           child: isLoading
-              ? Platform.isIOS
-                  ? const CupertinoActivityIndicator()
-                  : const CircularProgressIndicator()
+              ? Center(
+                child: SizedBox(
+                    height: 30,
+                    width: 30,
+                    child: Platform.isIOS
+                        ? const CupertinoActivityIndicator()
+                        : const CircularProgressIndicator(),
+                  ),
+              )
               : Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

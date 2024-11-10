@@ -21,6 +21,7 @@ class EditProfile extends StatelessWidget {
     return GetBuilder<ProfileController>(
       builder: (controller) {
         return Scaffold(
+          resizeToAvoidBottomInset: true,
           appBar: AppBar(
             centerTitle: true,
             title: const CommonText(
@@ -50,8 +51,13 @@ class EditProfile extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   )
                                 : CommonImage(
-                                    imageSrc: AppImages.profile,
-                                    imageType: ImageType.png,
+                                    imageSrc: controller.userModel.image.isEmpty
+                                        ? AppImages.profile
+                                        : controller.userModel.image,
+                                    imageType:
+                                        controller.userModel.image.isEmpty
+                                            ? ImageType.png
+                                            : ImageType.network,
                                     height: 170,
                                     width: 170,
                                   ),
@@ -79,7 +85,7 @@ class EditProfile extends StatelessWidget {
                       titleText: AppString.saveAndChanges,
                       onTap: () {
                         if (formKey.currentState!.validate()) {
-                          Get.back();
+                          controller.updateProfileRepo();
                           // Get.toNamed(AppRoutes.patientsProfile);
                         }
                       }),
