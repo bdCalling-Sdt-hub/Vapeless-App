@@ -36,7 +36,7 @@ class Item extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: horizontal.w, vertical: vertical.h),
-        margin: const EdgeInsets.only(top: 16),
+        margin: const EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
             color: bgColor, borderRadius: BorderRadius.circular(12)),
         child: Row(
