@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
-import 'package:vapeless/services/api_service.dart';
-import 'package:vapeless/utils/app_url.dart';
 import 'package:vapeless/utils/payment_key.dart';
 import 'helpers/app_routes.dart';
 import 'helpers/dependency_injection.dart';
