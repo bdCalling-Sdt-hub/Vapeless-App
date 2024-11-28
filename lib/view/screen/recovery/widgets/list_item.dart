@@ -64,7 +64,7 @@ class CircularPercentageIndicator extends StatelessWidget {
   final double strokeWidth;
   final Color color;
 
-  CircularPercentageIndicator({
+  CircularPercentageIndicator({super.key,
     required this.percentage,
     required this.size,
     required this.strokeWidth,
