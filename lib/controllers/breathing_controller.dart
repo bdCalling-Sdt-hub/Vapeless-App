@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:get/get.dart';
 
 class BreathingController extends GetxController {
-  bool showFirst = true;
+  bool showFirst = false;
 
   int breathCount = 0;
 

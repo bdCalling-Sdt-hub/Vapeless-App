@@ -54,7 +54,8 @@ class _BreathingScreenState extends State<BreathingScreen> {
                     ? GestureDetector(
                         onTapDown: controller.startBreathing,
                         onTapUp: controller.endBreathing,
-                        child: Container(
+                        child: AnimatedContainer(
+                          duration: const Duration(seconds: 3),
                           key: const ValueKey(
                               1), // Unique key to identify widget
 

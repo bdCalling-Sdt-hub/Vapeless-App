@@ -22,4 +22,5 @@ class AppIcons {
   static const String nicotineCravings = "$baseurl/nicotine_cravings.svg";
   static const String smell = "$baseurl/smell.svg";
   static const String award = "$baseurl/award.svg";
+  static const String breathingTap = "$baseurl/breathing_tap.svg";
 }
