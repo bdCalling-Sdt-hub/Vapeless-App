@@ -21,6 +21,7 @@ class AppUrls {
   static const termsOfServices = "$baseUrl/terms-and-conditions";
   static const chats = "$baseUrl/chats";
   static const messages = "$baseUrl/messages";
+  static const groups = "$baseUrl/groups";
 }
 
 

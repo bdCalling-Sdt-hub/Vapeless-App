@@ -19,7 +19,7 @@ class GroupGoalsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: CommonText(
+        title: const CommonText(
           text: AppString.groupGoals,
           fontSize: 20,
           fontWeight: FontWeight.bold,
@@ -41,11 +41,15 @@ class GroupGoalsScreen extends StatelessWidget {
                     border: Border.all(color: AppColors.white, width: 0.5)),
                 child: Column(
                   children: [
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CommonText(text: "30-Days Challange"),
-                        CommonText(text: "780/1000"),
+                        CommonText(
+                            text:
+                                "${controller.groupGoalModel.data.isNotEmpty ? controller.groupGoalModel.data[0].groupDetails.duration : ""}-Days Challange"),
+                        CommonText(
+                            text:
+                                "${controller.groupGoalModel.data.isNotEmpty ? controller.groupGoalModel.data[0].groupDetails.duration : ""}/1000"),
                       ],
                     ),
                     16.height,
@@ -66,11 +70,16 @@ class GroupGoalsScreen extends StatelessWidget {
                     ).start,
                     16.height,
                     ListView.builder(
-                      itemCount: controller.teamList.length,
+                      itemCount: controller.groupGoalModel.data.isNotEmpty
+                          ? controller
+                              .groupGoalModel.data[0].participants.length
+                          : 0,
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemBuilder: (context, index) => ListItem(
-                        item: controller.teamList[index],
+                        item: controller
+                            .groupGoalModel.data[0].participants[index],
+                        index: index + 1,
                       ),
                     )
                   ],

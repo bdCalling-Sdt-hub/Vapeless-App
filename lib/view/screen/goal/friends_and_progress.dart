@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vapeless/controllers/goal/friends_and_progress_controller.dart';
 import 'package:vapeless/helpers/my_extension.dart';
+import 'package:vapeless/helpers/prefs_helper.dart';
+import 'package:vapeless/models/group_goal_model.dart';
 import 'package:vapeless/utils/app_string.dart';
 import 'package:vapeless/view/component/text/common_text.dart';
 import 'package:vapeless/view/component/text_field/common_text_field.dart';
 
 import '../../../utils/app_colors.dart';
+import 'widgets/add_friend.dart';
 import 'widgets/list_item.dart';
 
 class FriendsAndProgress extends StatelessWidget {
@@ -24,11 +27,11 @@ class FriendsAndProgress extends StatelessWidget {
       ),
       body: GetBuilder<FriendsAndProgressController>(
         builder: (controller) => SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     color: AppColors.bg4,
                     borderRadius: BorderRadius.circular(12),
@@ -56,8 +59,23 @@ class FriendsAndProgress extends StatelessWidget {
                   ],
                 ),
               ),
+              10.height,
+              ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                itemCount: 3,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemBuilder: (context, index) => AddFriend(
+                  item: Participant(
+                      userId: "Naimul",
+                      image: PrefsHelper.myImage,
+                      vapeCount: 5),
+                  index: index,
+                ),
+              ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
                     color: AppColors.bg4,
                     borderRadius: BorderRadius.circular(12),
@@ -82,7 +100,11 @@ class FriendsAndProgress extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemBuilder: (context, index) => ListItem(
-                        item: controller.teamList[index],
+                        item: Participant(
+                            userId: "naim",
+                            image: PrefsHelper.myImage,
+                            vapeCount: 3),
+                        index: index,
                       ),
                     )
                   ],
@@ -115,7 +137,11 @@ class FriendsAndProgress extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemBuilder: (context, index) => ListItem(
-                        item: controller.globalList[index],
+                        item: Participant(
+                            userId: "naim",
+                            image: PrefsHelper.myImage,
+                            vapeCount: 3),
+                        index: index,
                       ),
                     )
                   ],

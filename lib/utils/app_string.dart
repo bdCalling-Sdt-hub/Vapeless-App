@@ -138,6 +138,7 @@ class AppString {
   static const String challengeDuration = "Challenge Duration";
   static const String setChallengeDuration = "Set challenge Duration";
   static const String addFriends = "Add Friends";
+  static const String addGroup = "Add Group";
   static const String searchByNameOrEmail = "Search by name or email";
   static const String yourFriends = "Your Friends";
   static const String globalLeaderboard = "Global Leaderboard";
@@ -153,4 +154,5 @@ class AppString {
   static const String reset = "Reset";
   static const String findYourCalm = "Find your calm";
   static const String breathDetails = "Deep breath reduces cravings and anxiety. You’re making great progress!";
+  static const String setGroupGoal = "SET GROUP GOAL";
 }

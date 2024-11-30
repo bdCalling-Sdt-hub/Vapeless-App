@@ -24,7 +24,7 @@ class GoalsScreen extends StatelessWidget {
         child: Column(
           children: [
             GestureDetector(
-                onTap: () => Get.toNamed(AppRoutes.groupGoalsScreen),
+                onTap: () => Get.toNamed(AppRoutes.groupGoalSet),
                 child:
                     const Item(icon: Icons.group, title: AppString.groupGoals)),
             20.height,

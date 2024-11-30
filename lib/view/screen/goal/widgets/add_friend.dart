@@ -9,8 +9,8 @@ import 'package:vapeless/view/component/text/common_text.dart';
 
 import '../../../../models/group_goal_model.dart';
 
-class ListItem extends StatelessWidget {
-  const ListItem({super.key, required this.item, required this.index});
+class AddFriend extends StatelessWidget {
+  const AddFriend({super.key, required this.item, required this.index});
 
   final Participant item;
   final int index;
@@ -43,15 +43,19 @@ class ListItem extends StatelessWidget {
                 : AppColors.white,
           ),
           const Spacer(),
-          CommonImage(
-            imageSrc: AppIcons.dailyAve,
-            imageType: ImageType.svg,
-            imageColor: AppColors.ok,
-          ),
-          CommonText(
-            text: item.vapeCount.toString(),
-            color: AppColors.ok,
-            left: 8,
+          const Row(
+            children: [
+              Icon(
+                Icons.add,
+                color: AppColors.ok,
+              ),
+              CommonText(
+                text: AppString.addFriends,
+                color: AppColors.ok,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              )
+            ],
           )
         ],
       ),

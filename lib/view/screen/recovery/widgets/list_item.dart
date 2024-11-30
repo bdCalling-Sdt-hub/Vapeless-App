@@ -35,14 +35,6 @@ class ListItem extends StatelessWidget {
                   text: item['title'],
                   bottom: 4,
                 ),
-                CommonText(
-                  text: item['subtitle'],
-                  fontSize: 10,
-                  fontWeight: FontWeight.w400,
-                  bottom: 4,
-                  maxLines: 2,
-                  textAlign: TextAlign.start,
-                ),
               ],
             ),
           ),
@@ -64,7 +56,7 @@ class CircularPercentageIndicator extends StatelessWidget {
   final double strokeWidth;
   final Color color;
 
-  CircularPercentageIndicator({super.key,
+  const CircularPercentageIndicator({super.key,
     required this.percentage,
     required this.size,
     required this.strokeWidth,
